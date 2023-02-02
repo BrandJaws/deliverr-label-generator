@@ -104,7 +104,7 @@ export default function HomePage() {
     );
 
     const token_accessCode = await token_response.json();
-    console.log(token_accessCode.access_token);
+    // console.log(token_accessCode.access_token);
     if (token_accessCode != null){
       getFinalResponse(token , token_accessCode.access_token, value);
     }
