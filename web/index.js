@@ -1,4 +1,6 @@
 // @ts-check
+import * as dotenv from 'dotenv'
+dotenv.config();
 import { join } from "path";
 import { readFileSync } from "fs";
 import express from "express";
@@ -7,7 +9,7 @@ import fetch from 'node-fetch'
 
 import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
-import GDPRWebhookHandlers from "./gdpr.js";
+import GDPRWebhookHandlers from "./gdpr.js"; 
 
 const PORT = parseInt(process.env.BACKEND_PORT || process.env.PORT, 10);
 
