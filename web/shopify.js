@@ -17,13 +17,13 @@ const billingConfig = {
     interval: BillingInterval.OneTime,
   },
 };
-console.log();
+
 const shopify = shopifyApp({
   api: {
     apiKey:process.env.SHOPIFY_API_KEY,
     apiSecretKey: process.env.SHOPIFY_API_SECRET,
     scopes:process.env.SCOPES,
-    hostName:process.env.HOST,
+    hostName:process.env.HOST.replace(/^https?:\/\//, ''),
     apiVersion: LATEST_API_VERSION,
     restResources,
     billing: undefined, // or replace with billingConfig above to enable example billing
