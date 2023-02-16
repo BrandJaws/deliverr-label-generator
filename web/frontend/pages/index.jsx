@@ -37,7 +37,7 @@ export default function HomePage() {
 
   const handleSubmit = useCallback((_event) => {
     window.open(
-      "https://api.deliverr.com/oauth/v1/authorize?scopes=api/parcel-integration&redirect_uri=https://culturefly.myshopify.com/admin/apps/deliverr-label-generate",
+      "https://api.deliverr.com/oauth/v1/authorize?scopes=api/parcel-integration&redirect_uri=https://culturefly.myshopify.com/admin/apps/deliverr-custom-app",
       "_blank"
     );
   }, []);
